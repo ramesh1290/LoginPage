@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <main>
+    <div class="h-[100vh] flex justify-center items-center ">
+      <div class=" w-[400px] h-[400px] rounded-md shadow-lg shadow-sky-600 ring-1 ring-blue-200 ">
+      <p class="font-sans text-4xl text-slate-600 text-center mt-4">Sign in</p>
+      <p class="ml-8 font-sans text-xl mb-2 mt-6 outline-0">Username:</p>
+      <input class="w-[85%] ml-8 leading-4" type="text"placeholder="Enter your username or your email address">
+      <p class="font-sans ml-8 text-xl mb-2 mt-6">Password</p>
+      <input class="ml-8 w-[85%] outline-0" id="inputPassword" type="password" placeholder="Enter your password">
+      <i class="bi bi-eye-slash " id="togglePassword"></i>
+
+      <button  id="buttonId"  class="mt-24  ml-[20%] w-[60%] rounded-md bg-blue-500 py-2 text-white font-semibold">Login</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+
+    const passwordInput = document.querySelector('#inputPassword');
+    const togglePassword = document.querySelector('#togglePassword')
+
+    togglePassword.addEventListener('click', function () {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      this.classList.toggle('bi-eye');
+      
+   
+    });
+
+
+
+let buttonElement=document.querySelector('#buttonId')
+buttonElement.addEventListener('click',function(){
+  console.log('Button is pressed')
+})
+
+
+
+
+
+  </script>
+</body>
+
+</html>
